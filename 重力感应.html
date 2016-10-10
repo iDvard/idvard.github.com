@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+    <script>
+        if(window.DeviceMotionEvent){
+            window.addEventListener('devicemotion',function(ev){
+                var msg = accelerationIncludingGravity;
+                document.write('x轴'+msg.x+'\n'+'y轴'+msg.y+'\n'+'y轴'+msg.z);
+            },false)
+        }else{
+            alert('不支持');
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
