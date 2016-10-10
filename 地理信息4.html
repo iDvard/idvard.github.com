@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+    <script>
+        if(navigator.geolocation){
+            navigator.geolocation.getCurrentPosition(function(ev){
+                var msg = ev.coords;
+                alert(msg.longitude+'|'+msg.latitude);
+
+            },function(ev){
+                alert('失败');
+            });
+            navigator.geolocation.WatchPosition(function(ev){
+                var msg = ev.coords;
+                for(var name in msg){
+                    document.write(name+':'+msg[name]+'<br />');
+                }
+            },function(ev){
+                alert('失败');
+            })
+        }else{
+            alert('NO');
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
