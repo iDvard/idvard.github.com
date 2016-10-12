@@ -87,6 +87,7 @@
             margin-top:0.55rem;
             font-size:0.65rem;
             float: left;
+            font-weight:normal;
         }
         .bar p{
             margin-top:0.55rem;
@@ -94,7 +95,6 @@
         }
         #box .pic{
             width: 16rem;
-            height: 8rem;
             background:green;
             color: #999;
         }
@@ -116,7 +116,8 @@
             height: 3rem;
             background:#e00202;
             color: #fff;
-            font-size:1rem;
+            font-size:1.2rem;
+            font-weight:bold;
             text-align:center;
             line-height:3rem;
             float: left;
@@ -150,7 +151,13 @@
         }
     </style>
     <script>
-        document.documentElement.style.fontSize=document.documentElement.clientWidth/16+'px';
+        (function(win,doc){
+            win.addEventListener('resize',setFont,false);
+            setFont();
+            function setFont(){
+                doc.documentElement.style.fontSize=doc.documentElement.clientWidth/16+'px';
+            }
+        })(window,document);
     </script>
 </head>
 <body>
@@ -174,6 +181,8 @@
             <li>商品</li>
             <li>商品</li>
             <li>商品</li>
+        </ul>
+        <ul class="pic">
             <li>商品</li>
             <li>商品</li>
             <li>商品</li>
