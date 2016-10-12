@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta charset="UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-family:'微软雅黑';
+        }
+        html,body,#box{
+            height:100%;
+        }
+        #box{
+            width:16rem;
+            display:-webkit-box;
+            -webkit-box-orient:vertical;
+        }
+        #box header{
+            width:16rem;
+            height:2.5rem;
+            font-size:1rem;
+            text-align:center;
+            line-height:2.5rem;
+            color:#d51938;
+            position: relative;
+        }
+        #box header .backButton{
+            position: absolute;
+            left: 0.5rem;
+            top: 0.6rem;
+            height: 1.7rem;
+            width: 3.17rem;
+            background:url(img/return.png) no-repeat;
+            background-size:3.17rem;
+            color:#666;
+            text-align: center;
+            line-height:1.6rem;
+            font-size:0.6rem;
+        }
+        #box div.banner{
+            width:16rem;
+            height:6.675rem;
+        }
+        #box div.banner img{
+            width:16rem;
+            height:6.675rem;
+        }
+        #box div.btn{
+            width: 10.35rem;
+            height:1.25rem;
+            padding-left:5.65rem;
+        }
+        #box div.btn>p{
+            width: 0.5rem;
+            height: 0.5rem;
+            background: #ccc;
+            border-radius:50%;
+            float: left;
+            margin:0.25rem;
+        }
+        #box div.btn>p.active{
+            background:red;
+        }
+        .bar{
+            width: 15rem;
+            height: 1.75rem;
+            margin: 0.5rem;
+            border-bottom:2px solid #ccc;
+            font-size:0.65rem;
+        }
+        .bar i{
+            margin-top:0.65rem;
+            float: left;
+            background: #d51938;
+            width: 0.1rem;
+            height: 0.65rem;
+        }
+        .bar h2{
+            margin-left:0.45rem;
+            margin-top:0.55rem;
+            font-size:0.65rem;
+            float: left;
+        }
+        .bar p{
+            margin-top:0.55rem;
+            float: right;
+        }
+        #box .pic{
+            width: 16rem;
+            height: 8rem;
+            background:green;
+            color: #999;
+        }
+        #box .pic li{
+            float: left;
+            margin-top:3rem;
+            margin-left: 2rem;
+            font-size:0.55rem;
+            position:relative;
+        }
+        .pic2 li{
+            margin:0.5rem;
+            width: 15rem;
+            height: 3rem;
+            background:#f4f4f4;
+        }
+        .pic2 .num{
+            width: 1.5rem;
+            height: 3rem;
+            background:#e00202;
+            color: #fff;
+            font-size:1rem;
+            text-align:center;
+            line-height:3rem;
+            float: left;
+        }
+        .pic2 li img{
+            width: 4.5rem;
+            height: 3rem;
+            float: left;
+        }
+        .pic2 li .p1{
+            float: left;
+            color: #999;
+        }
+        .pic2 li p:nth-child(1){
+            width:4rem;
+            font-size:0.6rem;
+            margin-left:0.5rem;
+            margin-top:0.75rem;
+        }
+        .pic2 li p:nth-child(2){
+            width:4rem;
+            font-size:0.6rem;
+            margin-left:0.5rem;
+            margin-top:0.25rem;
+        }
+        .pic2 li i{
+            color:#999;
+            float: right;
+            margin-right:1.75rem;
+            margin-top:1rem;
+        }
+    </style>
+    <script>
+        document.documentElement.style.fontSize=document.documentElement.clientWidth/16+'px';
+    </script>
+</head>
+<body>
+    <div id="box">
+        <header>
+            聚划算
+            <div class="backButton">返回</div>
+        </header>
+        <div class="banner">
+            <img src="img/bg.jpg" alt="">
+        </div>
+        <div class="btn">
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p class="active"></p>
+        </div>
+        <ul class="pic">
+            <li>商品</li>
+            <li>商品</li>
+            <li>商品</li>
+            <li>商品</li>
+            <li>商品</li>
+            <li>商品</li>
+            <li>商品</li>
+            <li>商品</li>
+        </ul>
+        <div class="bar">
+            <i></i>
+            <h2>聚划算热卖排行</h2>
+            <p>TOP10</p>
+        </div>
+        <ul class="pic2">
+            <li>
+                <a href="javascript:;">
+                    <div class="num">1</div>
+                    <img src="img/1.jpg" alt="">
+                    <div class="p1">
+                        <p>已售68423</p>
+                        <p>2.3折   &yen299</p>
+                    </div>
+                    <i>&yen51</i>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <div class="num">2</div>
+                    <img src="img/2.jpg" alt="">
+                    <div class="p1">
+                        <p>已售68423</p>
+                        <p>2.3折   &yen299</p>
+                    </div>
+                    <i>&yen51</i>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <div class="num">3</div>
+                    <img src="img/1.jpg" alt="">
+                    <div class="p1">
+                        <p>已售68423</p>
+                        <p>2.3折   &yen299</p>
+                    </div>
+                    <i>&yen51</i>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <div class="num">4</div>
+                    <img src="img/2.jpg" alt="">
+                    <div class="p1">
+                        <p>已售68423</p>
+                        <p>2.3折   &yen299</p>
+                    </div>
+                    <i>&yen51</i>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <div class="num">5</div>
+                    <img src="img/1.jpg" alt="">
+                    <div class="p1">
+                        <p>已售68423</p>
+                        <p>2.3折   &yen299</p>
+                    </div>
+                    <i>&yen51</i>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <div class="num">6</div>
+                    <img src="img/2.jpg" alt="">
+                    <div class="p1">
+                        <p>已售68423</p>
+                        <p>2.3折   &yen299</p>
+                    </div>
+                    <i>&yen51</i>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <div class="num">7</div>
+                    <img src="img/1.jpg" alt="">
+                    <div class="p1">
+                        <p>已售68423</p>
+                        <p>2.3折   &yen299</p>
+                    </div>
+                    <i>&yen51</i>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <div class="num">8</div>
+                    <img src="img/2.jpg" alt="">
+                    <div class="p1">
+                        <p>已售68423</p>
+                        <p>2.3折   &yen299</p>
+                    </div>
+                    <i>&yen51</i>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <div class="num">9</div>
+                    <img src="img/1.jpg" alt="">
+                    <div class="p1">
+                        <p>已售68423</p>
+                        <p>2.3折   &yen299</p>
+                    </div>
+                    <i>&yen51</i>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <div class="num">10</div>
+                    <img src="img/2.jpg" alt="">
+                    <div class="p1">
+                        <p>已售68423</p>
+                        <p>2.3折   &yen299</p>
+                    </div>
+                    <i>&yen51</i>
+                </a>
+            </li>
+        </ul>
+        <footer></footer>
+    </div>
+</body>
+</html>
