@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta charset="UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #box {
+            width: 100px;
+            height: 100px;
+            background: red;
+            float: left;
+        }
+        #box1 {
+            width: 100px;
+            height: 100px;
+            background: blue;
+            float: right;
+        }
+    </style>
+    <script>
+        function drag(id) {
+            var oBox = document.getElementById(id);
+            var x = 0;
+            var y = 0;
+            oBox.addEventListener('touchstart', function (ev) {
+                var disX = ev.targetTouches[0].pageX - x;
+                var disY = ev.targetTouches[0].pageY - y;
+                function move(ev) {
+                    x = ev.targetTouches[0].pageX - disX;
+                    y = ev.targetTouches[0].pageY - disY;
+                    oBox.style.webkitTransform = 'translate('+x+'px,'+y+'px)';
+                }
+                function end() {
+                    document.removeEventListener('touchmove', move, false);
+                    document.removeEventListener('touchend', end, false);
+                }
+                document.addEventListener('touchmove', move, false);
+                document.addEventListener('touchend', end, false);
+                ev.preventDefault();
+            }, false);
+        }
+        window.onload = function () {
+            drag('box');
+            drag('box1');
+        }
+    </script>
+</head>
+<body>
+<div id="box"></div>
+<div id="box1"></div>
+</body>
+</html>
